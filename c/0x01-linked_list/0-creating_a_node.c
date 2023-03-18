@@ -21,7 +21,8 @@ int main(void)
 		head->data = 45;
 		head->link = NULL;
 	}
-	printf("data is: %d\nlink is: %p\nAddress of node is: %p\n",
-			head->data, head->link, head);
+	printf("data is: %d\nlink is: %p\nAddress of node in memory is"
+			" located at: %p\nThe value stored in HEAD is: %p\n",
+			head->data, NULL, &head->data, head);
 	return (0);
 }
