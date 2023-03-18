@@ -13,8 +13,8 @@ int main(void)
 	my_node *head = NULL;
 
 	head = (my_node *)malloc(sizeof(my_node));
-	if (head == NULL)		/* if malloc fails or if (0) or if (!head) */
-		return (1);			/* (0) = Success; (>0) = Operation is not successful */
+	if (head == NULL)		/* if malloc fails || if (0) || if (!head) */
+		return (1);			/* (0) == Success, (!0) == not successful */
 
 	else
 	{
