@@ -54,8 +54,8 @@ int main(void)
 		current->link = NULL;
 		head->link = current;
 	}
-	printf("address stored in head: %p\n1st value in the list: %d\n"
-			"2nd value in the list: %d\naddress of 1st node: %p\n"
+	printf("address stored in head: %p\n1st value in the list: %ld\n"
+			"2nd value in the list: %ld\naddress of 1st node: %p\n"
 			"address of 2nd node: %p\n", head, head->data, current->data,
 			&head->data, &current->data);
 	return (0);

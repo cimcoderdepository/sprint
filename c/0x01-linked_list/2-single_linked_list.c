@@ -7,7 +7,6 @@
  *
  * Return: 0 always on success.
  */
-
 int main(void)
 {
 	/**
@@ -16,7 +15,8 @@ int main(void)
 	 * (allocate) bytes in memory for the node; and assign the pointer
 	 * (address) returned by the malloc function to HEAD.
 	 */
-	my_node *head = malloc(sizeof(my_node));
+	my_node *head = NULL;
+	head = malloc(sizeof(my_node));
 
 	if (!head)
 		return (-1);
