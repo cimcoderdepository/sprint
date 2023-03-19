@@ -72,6 +72,7 @@ int main(void)
 								 * part of the 2nd node from old value (NULL)
 								 * to the address of the 3rd node (stored in CURRENT).
 								 */
+	printf("\nList = [%ld, %ld, %ld]\n", head->data, head->link->data, head->link->link->data);
 	printf("\n1st value: %ld\n2nd value: %ld\n3rd value: %ld\n"
 			"The HEAD is: %p\n\n1st_node address: %p\n2nd_node address: "
 			"%p\n3rd_node address: %p\n\nThe 1st value is stored at %p in "
@@ -79,7 +80,7 @@ int main(void)
 			"stored at %p in memory\n", head->data, head->link->data, current->data,
 			head, head, head->link, current, &head->data, &head->link->data,
 			&head->link->link->data);
-	printf("\n\nThe address of %ld is: %p\nThe address of %ld is: %p\nThe address"
+	printf("\nThe address of %ld is: %p\nThe address of %ld is: %p\nThe address"
 			" of %ld is: %p\n", head->data, head, head->link->data, head->link,
 			head->link->link->data, head->link->link);
 	return (0);
