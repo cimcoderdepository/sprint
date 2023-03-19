@@ -44,16 +44,17 @@ int main(void)
 	printf("Enter 2nd value of the List you're trying to create: ");
 	scanf("%ld", &current->data);
 	current->link = NULL;
-	head->link = current;	/**
-							 * Here we're updating the link part of the 1st
-							 * node from old value (NULL) to the address of
-							 * the 2nd node (stored in CURRENT), then
-							 * assigning CURRENT to head->link.
-* NOTE: Once CURRENT has delivered its value (address of 2nd node) to be
-* stored in (head->link), CURRENT is freed up (ready) to be reused
-* subsequently to create other nodes, because its former value is NOT lost
-* yet, but has been held in the link part of the 1st node.
-*______________________________________________________________________________
+	head->link = current;
+	/**
+	 * Here we're updating the link part of the 1st node from old value (NULL)
+	 * to the address of the 2nd node (stored in CURRENT), then assigning
+	 * CURRENT to head->link.
+	 * NOTE:
+	 * Once CURRENT has delivered its value (address of 2nd node) to be
+	 * stored in (head->link), CURRENT is freed up (ready) to be reused
+	 * subsequently to create other nodes, because its former value is NOT lost
+	 * yet, but has been held in the link part of the 1st node.
+	 *____________________________________________________________________________
 	 * CREATING THE 3RD_NODE
 	 * We can reuse the CURRENT pointer for creating the 3rd node. Call the
 	 * malloc function to create (allocate) bytes in memory for the node; and
@@ -67,19 +68,20 @@ int main(void)
 	printf("Enter 3rd value of the List you're trying to create: ");
 	scanf("%ld", &current->data);
 	current->link = NULL;
-	head->link->link = current;	/**
-								 * Here we're updating & assigning the link
-								 * part of the 2nd node from old value (NULL)
-								 * to the address of the 3rd node (stored in CURRENT).
-								 */
-	printf("\nList = [%ld, %ld, %ld]\n", head->data, head->link->data, head->link->link->data);
+	head->link->link = current;
+	/**
+	 * Here we're updating & assigning the link part of the 2nd node from
+	 * old value (NULL) to the address of the 3rd node (stored in CURRENT).
+	 */
+	printf("\nList = [%ld, %ld, %ld]\n", head->data, head->link->data,
+			head->link->link->data);
 	printf("\n1st value: %ld\n2nd value: %ld\n3rd value: %ld\n"
 			"The HEAD is: %p\n\n1st_node address: %p\n2nd_node address: "
 			"%p\n3rd_node address: %p\n\nThe 1st value is stored at %p in "
 			"memory\nThe 2nd value is stored at %p in memory\nThe 3rd value is "
-			"stored at %p in memory\n", head->data, head->link->data, current->data,
-			head, head, head->link, current, &head->data, &head->link->data,
-			&head->link->link->data);
+			"stored at %p in memory\n",head->data,head->link->data,
+			current->data,head,head,head->link,current,&head->data,
+			&head->link->data,&head->link->link->data);
 	printf("\nThe address of %ld is: %p\nThe address of %ld is: %p\nThe address"
 			" of %ld is: %p\n", head->data, head, head->link->data, head->link,
 			head->link->link->data, head->link->link);
