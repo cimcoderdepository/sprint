@@ -10,7 +10,7 @@
  */
 
 struct node {
-	int data;
+	long int data;
 	struct node *link;
 };
 typedef struct node my_node;

@@ -24,5 +24,7 @@ int main(void)
 	printf("data is: %d\nlink is: %p\nAddress of node in memory is"
 			" located at: %p\nThe value stored in HEAD is: %p\n",
 			head->data, NULL, &head->data, head);
+	printf("Address of data part: %p\nAddress of link part: %p\n",
+			&head->data, &head->link);
 	return (0);
 }
